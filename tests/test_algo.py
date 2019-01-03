@@ -8,7 +8,8 @@ class WaveAlgoTest(unittest.TestCase):
 
     def test_profit_taking(self):
 
-        sim_md = MarketDataSimManual(500000)
+        initial_price = 500000
+        sim_md = MarketDataSimManual(initial_price)
         ea = ExchangeAccessSim(sim_md)
         audit = AlgoAuditSim()
 
@@ -16,7 +17,7 @@ class WaveAlgoTest(unittest.TestCase):
         drop   = 800
         bounce = 80
         profit = 500
-        loss_cut    = 1200
+        loss_cut = 1200
         sleep_sec = 0
 
         n = 32
